@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import {
   IonHeader, IonToolbar, IonTitle, IonContent,
@@ -50,8 +50,10 @@ export class HomePage {
     return this.surfistas.filter(surfista => surfista.nombre.toLowerCase().includes(this.busqueda.toLowerCase()));
   }
 
-  // TODO Modificar el constructor para inyectar Router y ToastController con inject
-  constructor(private router: Router, private toastController: ToastController) {}
+  // DONE Modificar el constructor para inyectar Router y ToastController con inject
+  constructor() {}
+  private router = inject(Router);
+  private toastController = inject(ToastController);
 
   // DONE (Apartado 1 + 3 – Event Binding): Mostrar un ion-toast al pulsar el botón
   async mostrarToast(): Promise<void> {
