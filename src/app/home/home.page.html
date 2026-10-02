@@ -1,0 +1,67 @@
+<!--
+  DI01 TA02 – HomePage
+  Implementa los TODOs siguiendo los apartados indicados en la teoría.
+-->
+
+<!-- TODO (Apartado 1): Encabezado con ion-header, ion-toolbar e ion-title -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <!-- TODO: Escribe aquí el nombre de tu aplicación -->
+      <strong>{{nombreApp}}</strong>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <!-- TODO (Apartado 3 – Two-way Binding):
+       Añadir un ion-item con ion-input para filtrar la lista en tiempo real.
+       - Haced uso de la variable "busqueda" en el ion-input.
+       - Añade un placeholder descriptivo.
+       Referencia de la teoría (apartado 3 – Two-way Binding):
+         <ion-input [(ngModel)]="nombre"></ion-input>
+  -->
+
+  <!-- TODO (Apartado 1 + 2 + 3):
+       Lista de elementos.
+       - Usa <ion-list> como contenedor.
+       - Itera sobre elementosFiltrados con @for (apartado 4 de la teoría, ya disponible).
+       - Cada fila: Un ion-item y tendremos <ion-label>.
+         · <h2> con el nombre del elemento.
+         · <p> con la descripción.
+       - Muestra al menos 5 elementos (defínelos en home.page.ts).
+
+       Referencia de la teoría (apartado 1 – ion-list, ion-item, ion-label): -->
+
+        <ion-list>
+          @for (surfista of surfistas; track surfista.id) {
+            <ion-item>
+              <ion-label>
+                <h2>{{surfista.nombre}}</h2><br/>
+                <p><strong>Disponibilidad Horaria: </strong>{{surfista.horario}}</p><br/>
+                <p><strong>Precio por Servicio: </strong>{{surfista.precioHora}}€/hora</p><br/>
+                <p><strong>Teléfono: </strong>{{surfista.telefono}}</p>
+              </ion-label>
+            </ion-item>
+          }
+        </ion-list>
+  
+
+  <!-- TODO (Apartado 1 + 3 – Event Binding + Property Binding):
+       Añadir un <ion-button> que:
+       · Al pulsarlo llame a mostrarToast()
+       · Esté deshabilitado si no hay elementos en la lista (usa la variable "hayElementos" para esto).
+
+       Referencia de la teoría (apartado 3 – Event Binding y Property Binding):
+         <ion-button [disabled]="!formValido" (click)="guardar()">Guardar</ion-button>
+  -->
+
+</ion-content>
+
+<!-- TODO (Apartado 1): Añadir ion-footer con ion-toolbar e ion-title informativo -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>{{footerApp}}</ion-title>
+  </ion-toolbar>
+</ion-footer>
