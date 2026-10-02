@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import {
   IonHeader, IonToolbar, IonTitle, IonContent,
-  ToastController
-} from '@ionic/angular/standalone';
+  ToastController, IonButton } from '@ionic/angular/standalone';
 import { FormsModule } from '@angular/forms';
 import { Elemento } from '../models/elemento.model';
 import { IonFooter, IonList, IonItem, IonLabel } from "@ionic/angular/standalone";
@@ -13,7 +12,7 @@ import { IonFooter, IonList, IonItem, IonLabel } from "@ionic/angular/standalone
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   //TODO añade los componentes de Ionic y FormsModule a imports
-  imports: [IonLabel, IonItem, IonList, IonFooter, 
+  imports: [IonButton, IonLabel, IonItem, IonList, IonFooter, 
     IonHeader, IonToolbar, IonTitle, IonContent, 
     FormsModule
   ],
