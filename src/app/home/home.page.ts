@@ -48,7 +48,7 @@ export class HomePage {
   get elementosFiltrados(): Elemento[] {
     // Implementa el filtro (this.elementos.filter): devuelve solo los elementos cuyo nombre
     // incluya el texto de this.busqueda (ignorando mayúsculas/minúsculas -> .toLowerCase())
-    return this.elementos;
+    return this.surfistas.filter(surfista => surfista.nombre.toLowerCase().includes(this.busqueda.toLowerCase()));
   }
 
   // TODO Modificar el constructor para inyectar Router y ToastController con inject
