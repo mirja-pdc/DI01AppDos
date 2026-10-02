@@ -55,6 +55,13 @@ export class HomePage {
 
   // TODO (Apartado 1 + 3 – Event Binding): Mostrar un ion-toast al pulsar el botón
   async mostrarToast(): Promise<void> {
-    // Consulta la teoría: apartado "ion-toast vs ion-alert"    
+    // Consulta la teoría: apartado "ion-toast vs ion-alert" 
+    // ToastController es un componente de Ionic que muestra mensajes emergentes
+    const toast = await this.toastController.create({
+      message: 'Lista de surfistas cargada correctamente',
+      duration: 2000,
+      position: 'bottom'
+    });
+    await toast.present();   
   }
 }
