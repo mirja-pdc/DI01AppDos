@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import {
   IonHeader, IonToolbar, IonTitle, IonContent,
-  ToastController, IonButton } from '@ionic/angular/standalone';
+  ToastController, IonButton, IonFooter, IonList, 
+  IonItem, IonLabel, IonInput } from '@ionic/angular/standalone';
 import { FormsModule } from '@angular/forms';
 import { Elemento } from '../models/elemento.model';
-import { IonFooter, IonList, IonItem, IonLabel } from "@ionic/angular/standalone";
 
 @Component({
   selector: 'app-home',
@@ -13,7 +13,7 @@ import { IonFooter, IonList, IonItem, IonLabel } from "@ionic/angular/standalone
   styleUrls: ['home.page.scss'],
   //TODO añade los componentes de Ionic y FormsModule a imports
   imports: [IonButton, IonLabel, IonItem, IonList, IonFooter, 
-    IonHeader, IonToolbar, IonTitle, IonContent, 
+    IonHeader, IonToolbar, IonTitle, IonContent, IonInput,
     FormsModule
   ],
 })
