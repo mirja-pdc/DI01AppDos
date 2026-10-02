@@ -51,9 +51,9 @@ export class HomePage {
   }
 
   // DONE Modificar el constructor para inyectar Router y ToastController con inject
-  constructor() {}
   private router = inject(Router);
   private toastController = inject(ToastController);
+  constructor() {}
 
   // DONE (Apartado 1 + 3 – Event Binding): Mostrar un ion-toast al pulsar el botón
   async mostrarToast(): Promise<void> {
