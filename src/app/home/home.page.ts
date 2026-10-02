@@ -19,7 +19,7 @@ import { IonFooter, IonList, IonItem, IonLabel } from "@ionic/angular/standalone
 })
 export class HomePage {
 
-  // TODO (Apartado 3 – Two-way Binding): Variable enlazada al campo de búsqueda
+  // DONE (Apartado 3 – Two-way Binding): Variable enlazada al campo de búsqueda
   busqueda: string = '';
 
   // DONE (Apartado 1): Añade al menos 5 elementos a este array
@@ -53,9 +53,9 @@ export class HomePage {
   // TODO Modificar el constructor para inyectar Router y ToastController con inject
   constructor(private router: Router, private toastController: ToastController) {}
 
-  // TODO (Apartado 1 + 3 – Event Binding): Mostrar un ion-toast al pulsar el botón
+  // DONE (Apartado 1 + 3 – Event Binding): Mostrar un ion-toast al pulsar el botón
   async mostrarToast(): Promise<void> {
-    // Consulta la teoría: apartado "ion-toast vs ion-alert" 
+    // Consultada la teoría: apartado "ion-toast vs ion-alert":
     // ToastController es un componente de Ionic que muestra mensajes emergentes
     const toast = await this.toastController.create({
       message: 'Lista de surfistas cargada correctamente',

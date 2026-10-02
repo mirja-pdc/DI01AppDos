@@ -20,13 +20,19 @@
 
 <ion-content [fullscreen]="true">
 
-  <!-- TODO (Apartado 3 – Two-way Binding):
+  <!-- DONE (Apartado 3 – Two-way Binding):
        Añadir un ion-item con ion-input para filtrar la lista en tiempo real.
        - Haced uso de la variable "busqueda" en el ion-input.
        - Añade un placeholder descriptivo.
        Referencia de la teoría (apartado 3 – Two-way Binding):
          <ion-input [(ngModel)]="nombre"></ion-input>
   -->
+  <ion-item>
+    <ion-input [(ngModel)]="busqueda" placeholder="Buscar surfista por nombre"></ion-input>
+  </ion-item>
+
+  <!-- TODO (Apartado 1 + 2 – Two-Way Binding): Campo de búsqueda con ion-input -->
+    
 
   <!-- DONE (Apartado 1 + 2 + 3):
        Lista de elementos.
@@ -65,7 +71,6 @@
     <ion-button [disabled]="!hayElementos" (click)="mostrarToast()">
       Cargar Surfistas 
     </ion-button>
-
 
 </ion-content>
 
