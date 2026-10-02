@@ -44,12 +44,12 @@
   -->
 
     <ion-list>
-      @for (surfista of surfistas; track surfista.id) {
+      @for (surfista of elementosFiltrados; track surfista.id) {
         <ion-item>
           <ion-label>
-            <h2>{{surfista.nombre}}</h2><br/>
-            <p><strong>Disponibilidad Horaria: </strong>{{surfista.horario}}</p><br/>
-            <p><strong>Precio por Servicio: </strong>{{surfista.precioHora}}€/hora</p><br/>
+            <h2>{{surfista.nombre}}</h2>
+            <p><strong>Disponibilidad Horaria: </strong>{{surfista.horario}}</p>
+            <p><strong>Precio por Servicio: </strong>{{surfista.precioHora}}€/hora</p>
             <p><strong>Teléfono: </strong>{{surfista.telefono}}</p>
           </ion-label>
         </ion-item>
